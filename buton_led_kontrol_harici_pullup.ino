@@ -3,6 +3,10 @@ const int ledPin = 13;
 int buttonState = 0;
 
 void setup() {
+  Serial.begin(9600);
+  delay(100); // Bazı durumlarda gerekli
+  Serial.println("GITHUB TEST");
+  
   pinMode(buttonPin, INPUT); // Dahili pull-up YOK!
   pinMode(ledPin, OUTPUT);
 }
