@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "author": "Robot Devre",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 0, "left": 0, "attrs": {} },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn1",
+      "top": 105.5,
+      "left": 320.3,
+      "rotate": 90,
+      "attrs": { "color": "green", "xray": "1" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": -44.6,
+      "left": 95.15,
+      "rotate": 270,
+      "attrs": { "value": "220" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": -128.4,
+      "left": 80.6,
+      "attrs": { "color": "red" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r2",
+      "top": 33.6,
+      "left": 277.85,
+      "rotate": 90,
+      "attrs": { "value": "1000" }
+    }
+  ],
+  "connections": [
+    [ "r1:1", "uno:13", "green", [ "h0" ] ],
+    [ "led1:A", "r1:2", "green", [ "v0", "h19.2" ] ],
+    [ "led1:C", "uno:GND.1", "black", [ "v28.8", "h0.4" ] ],
+    [ "r2:1", "uno:7", "green", [ "h0", "v-28.8", "h-115.2" ] ],
+    [ "uno:5V", "r2:2", "red", [ "v48.5", "h147.2", "v-28.8" ] ],
+    [ "btn1:1.l", "uno:GND.2", "black", [ "v0", "h19.2", "v124.8", "h-211.2" ] ],
+    [ "btn1:2.l", "r2:1", "green", [ "v-86.4", "h-0.2" ] ]
+  ],
+  "dependencies": {}
+}
