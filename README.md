@@ -4,7 +4,7 @@ Bu proje, Arduino Uno kartı ile harici **pull-up** direnç kullanılarak bir bu
 
 ---
 
-## 🔧 Kullanılan Malzemeler
+## 🔧 Kullanılan Malzemeler 
 
 - Arduino Uno  
 - 1 x LED (Kırmızı)  
